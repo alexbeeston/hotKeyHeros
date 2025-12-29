@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotKeyHeros", "HotKeyHeros\HotKeyHeros.csproj", "{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{E6300583-3624-4914-97A8-4E06C529364B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{08AE3D4B-26DD-4B7F-84A2-2133B62ADD52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6300583-3624-4914-97A8-4E06C529364B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6300583-3624-4914-97A8-4E06C529364B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6300583-3624-4914-97A8-4E06C529364B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6300583-3624-4914-97A8-4E06C529364B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AE3D4B-26DD-4B7F-84A2-2133B62ADD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AE3D4B-26DD-4B7F-84A2-2133B62ADD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AE3D4B-26DD-4B7F-84A2-2133B62ADD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AE3D4B-26DD-4B7F-84A2-2133B62ADD52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
