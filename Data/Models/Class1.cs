@@ -1,4 +1,4 @@
-﻿namespace HotKeyHeros.Data.Models;
+﻿namespace Data.Models;
 
 public class DataCollectionEntity
 {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.1.11312.151 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotKeyHeros", "HotKeyHeros\HotKeyHeros.csproj", "{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listener", "HotKeyHeros\Listener.csproj", "{DA8F9E89-7F7A-431D-ADE9-2E0DDBECE0DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{E6300583-3624-4914-97A8-4E06C529364B}"
 EndProject

@@ -1,7 +1,7 @@
-﻿using HotKeyHeros.Data;
+﻿using Data;
 using SharpHook;
 
-namespace HotKeyHeros;
+namespace Listener;
 
 public class SharpHookSandbox
 {

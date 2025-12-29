@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HotKeyHeros.Data
+namespace Data
 {
     public class LocalDbFactory : IDesignTimeDbContextFactory<LocalDbContext>
     {

@@ -1,10 +1,10 @@
-﻿using HotKeyHeros.Data.Models;
+﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HotKeyHeros.Data;
+namespace Data;
 
 public class LocalDbContext : DbContext
 {
