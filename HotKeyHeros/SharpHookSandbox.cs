@@ -1,20 +1,59 @@
-﻿using SharpHook;
+﻿using HotKeyHeros.Data;
+using SharpHook;
 
 namespace HotKeyHeros;
 
-public static class SharpHookSandbox
+public class SharpHookSandbox
 {
-    public static void OnKeyTyped(object? sender, KeyboardHookEventArgs e)
+    public SharpHookSandbox()
     {
-        Console.WriteLine("Key typed");
+        DbContext = new LocalDbFactory().CreateDbContext(Array.Empty<string>());
+        UtcLastFlush = DateTime.UtcNow;
+        FlusherTask = Task.Run(async () =>
+        {
+            while (true)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(10));
+                DateTime utcNow = DateTime.UtcNow;
+                var collection = new Data.Models.DataCollectionEntity
+                {
+                    UtcStart = UtcLastFlush,
+                    UtcEnd = utcNow,
+                    NumKeyStrokes = KeyStrokesSinceLastFlush,
+                    NumMouseClicks = MouseClicksStrokesSinceLastFlush
+                };
+                DbContext.Collections.Add(collection);
+                await DbContext.SaveChangesAsync();
+                Console.WriteLine($"Wrote new collection to local db. Key strokes {collection.NumKeyStrokes}. Mouse Clicks: {collection.NumMouseClicks}.");
+
+                KeyStrokesSinceLastFlush = 0;
+                MouseClicksStrokesSinceLastFlush = 0;
+                UtcLastFlush = utcNow;
+            }
+        });
     }
 
-    public static void OnMouseClicked(object? sender, MouseHookEventArgs e)
+    public LocalDbContext DbContext { get; init; }
+
+    private int KeyStrokesSinceLastFlush { get; set; }
+
+    private int MouseClicksStrokesSinceLastFlush { get; set; }
+
+    public DateTime UtcLastFlush { get; set; }
+
+    private Task FlusherTask { get; set; }
+
+    public void OnKeyTyped(object? sender, KeyboardHookEventArgs e)
     {
-        Console.WriteLine("Mouse clicked");
+        KeyStrokesSinceLastFlush++;
     }
 
-    public static async Task Sandbox()
+    public void OnMouseClicked(object? sender, MouseHookEventArgs e)
+    {
+        MouseClicksStrokesSinceLastFlush++;
+    }
+
+    public async Task RunListener()
     {
         EventLoopGlobalHook hook = new EventLoopGlobalHook();
         hook.KeyTyped += OnKeyTyped;           // EventHandler<KeyboardHookEventArgs>

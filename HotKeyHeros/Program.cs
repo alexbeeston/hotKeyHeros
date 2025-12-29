@@ -11,7 +11,8 @@ db.Collections.Add(new HotKeyHeros.Data.Models.DataCollectionEntity
     NumMouseClicks = 50
 });
 db.SaveChanges();
-//SharpHookSandbox.Sandbox();
+SharpHookSandbox handler = new SharpHookSandbox();
+handler.RunListener();
 
 
 
