@@ -56,20 +56,8 @@ public class SharpHookSandbox
     public async Task RunListener()
     {
         EventLoopGlobalHook hook = new EventLoopGlobalHook();
-        hook.KeyTyped += OnKeyTyped;           // EventHandler<KeyboardHookEventArgs>
-        hook.MouseClicked += OnMouseClicked;   // EventHandler<MouseHookEventArgs>
-        //hook.HookEnabled += OnHookEnabled;     // EventHandler<HookEventArgs>
-        //hook.HookDisabled += OnHookDisabled;   // EventHandler<HookEventArgs>
-        //hook.KeyPressed += OnKeyPressed;       // EventHandler<KeyboardHookEventArgs>sdfasdfasdfasdfasdf
-        //hook.KeyReleased += OnKeyReleased;     // EventHandler<KeyboardHookEventArgs>
-        //hook.MousePressed += OnMousePressed;   // EventHandler<MouseHookEventArgs>
-        //hook.MouseReleased += OnMouseReleased; // EventHandler<MouseHookEventArgs>
-        //hook.MouseMoved += OnMouseMoved;       // EventHandler<MouseHookEventArgs>
-        //hook.MouseDragged += OnMouseDragged;   // EventHandler<MouseHookEventArgs>
-        //hook.MouseWheel += OnMouseWheel;       // EventHandler<MouseWheelHookEventArgs>
-
-        //hook.Run();
-        // or
+        hook.KeyTyped += OnKeyTyped;
+        hook.MouseClicked += OnMouseClicked;
         await hook.RunAsync();
     }
 }
