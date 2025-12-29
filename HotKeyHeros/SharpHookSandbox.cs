@@ -13,7 +13,7 @@ public class SharpHookSandbox
         {
             while (true)
             {
-                await Task.Delay(TimeSpan.FromSeconds(10));
+                await Task.Delay(TimeSpan.FromSeconds(5));
                 DateTime utcNow = DateTime.UtcNow;
                 var collection = new Data.Models.DataCollectionEntity
                 {
