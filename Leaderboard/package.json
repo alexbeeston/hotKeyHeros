@@ -1,5 +1,5 @@
 {
-  "name": "local-ui",
+  "name": "leaderboard",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
